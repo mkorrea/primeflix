@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import api from '../../services/api'
 import './movie_info.css'
 
 function Movie () {
     const { id } = useParams();
+    const navigate = useNavigate()
     const [ movie, setMovie] = useState({});
     const [ loading, setLoading ] = useState(true);
 
@@ -21,18 +22,20 @@ function Movie () {
                 setLoading(false)
                 //definindo que 'movie' vai ter a api com o id do filme selecionado
             })
-            // executa .then caso dê certo
+            // executa .then caso ele consiga carregar a api
             .catch( () => {
-                console.log('desmontou')
+                navigate("/", { replace: true }) 
+                //redireciona para para a pagina inicial
+                // replace faz com que o usuário não consiga voltar para a página anterior (com as setinhas do navegador, por exemplo)
             })
-            // executa .catch caso de errado
+            // executa .catch caso não carregue a api
         }
         loadMovie()
 
         return () => {
             console.log('desmontou')
         }
-    }, [])
+    }, [id, navigate])
     
     if(loading) {
         return(
@@ -54,7 +57,7 @@ function Movie () {
             <section className='area-buttons'>
                 <button>Salvar</button>
                 <button>
-                    <a href='#'>Trailer</a>
+                    <a href={`https://youtube.com/results?search_query=${movie.title} trailer`} target='blank' rel='external'>Trailer</a>
                 </button>
             </section>
         </div>
