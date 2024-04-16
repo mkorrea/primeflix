@@ -1,0 +1,52 @@
+
+.movie-info{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 0 8px;
+}
+
+.movie-info h1{
+    margin: 14px 0;
+}
+
+.movie-info img{
+    width: 100%;
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.movie-info h3{
+    margin-top: 14px;
+}
+
+.movie-info span{
+    margin: 10px 0;
+}
+
+
+.area-buttons button{
+    margin-top: 12px;
+    margin-right: 14px;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.area-buttons button:hover{
+    background-color: #116feb;
+    color: #fff;
+}
+.area-buttons a{
+    text-decoration: none;
+    color: #000;
+}
+.area-buttons button:hover a{
+    color: #fff;
+}
