@@ -1,0 +1,48 @@
+.meus-favoritos{
+   margin-top: 24px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.meus-favoritos h1 {
+   margin-bottom: 15px;
+}
+
+.meus-favoritos ul {
+   max-width: 720px;
+   width: 100%;
+}
+
+.meus-favoritos ul li {
+   margin-bottom: 14px;
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+}
+
+.meus-favoritos span {
+   font-size: 18px;
+}
+
+.meus-favoritos li a {
+   margin-right: 14px;
+   text-decoration: none;
+   color: #116feb;
+}
+
+.meus-favoritos div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.meus-favoritos button {
+   height: 30px;
+   width: 55px;
+
+   color: #fff;
+   background-color: black;
+   border-radius: 4px;
+   cursor: pointer;
+}
